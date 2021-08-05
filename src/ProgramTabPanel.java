@@ -1,26 +1,15 @@
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import javax.swing.plaf.basic.BasicSliderUI;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 
-//TODO set actual size und set size von toolbar content
-
 public class ProgramTabPanel extends JPanel {
 
-    /*TODO add crossmode
-        differ between cross and full mode and real mid mode
-        add tabs
-        add save option
-     */
     private static final int WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width / 3;
     private static final int HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height / 3;
 
@@ -110,15 +99,11 @@ public class ProgramTabPanel extends JPanel {
         slider.setUI(new BasicSliderUI());
         slider.setToolTipText("Adjust the radius of the tool");
         slider.setBackground(new Color(200, 200, 200));
-        //TODO set size
 
         toolbar.add(startButton);
         toolbar.add(stopButton);
         toolbar.add(currentSizePane);
         toolbar.add(slider);
-
-
-        //TODO adds machen
 
 
         canvas.add(textPane);
@@ -130,30 +115,21 @@ public class ProgramTabPanel extends JPanel {
 
 
         //Listener
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                analysing = true;
-            }
+        startButton.addActionListener((event) -> {
+            analysing = true;
         });
-        stopButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                analysing = false;
-            }
+        stopButton.addActionListener((event) -> {
+            analysing = true;
         });
 
-        slider.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                size = slider.getValue();
-                currentSizePane.setText("radius: " + size);
+        slider.addChangeListener((event) -> {
+            size = slider.getValue();
+            currentSizePane.setText("radius: " + size);
 
-                if (slider.getValue() == 0) {
-                    getter = new SinglePixelGetter();
-                } else {
-                    getter = new MultiPixelGetter();
-                }
+            if (slider.getValue() == 0) {
+                getter = new SinglePixelGetter();
+            } else {
+                getter = new MultiPixelGetter();
             }
         });
         canvas.addKeyListener(new KeyListener() {

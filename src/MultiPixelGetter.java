@@ -8,7 +8,7 @@ public class MultiPixelGetter extends ColorGetter {
             long r = 0;
             long g = 0;
             long b = 0;
-            int pixelAmount = 0;
+            int pixelAmount;
 
 
             Point upperLeft = new Point(0, 0);
