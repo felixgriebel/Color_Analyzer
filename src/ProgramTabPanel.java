@@ -14,7 +14,7 @@ import java.awt.event.KeyListener;
 
 //TODO set actual size und set size von toolbar content
 
-public class ProgramGUI extends JFrame {
+public class ProgramTabPanel extends JPanel {
 
     /*TODO add crossmode
         differ between cross and full mode and real mid mode
@@ -40,27 +40,22 @@ public class ProgramGUI extends JFrame {
     private ColorGetter getter = new SinglePixelGetter();
 
 
-    public ProgramGUI() throws HeadlessException {
-        super("Color Analyser");
-
+    public ProgramTabPanel() {
+        super();
         //sets attributes for the frame
-        this.setSize(WIDTH,HEIGHT);
+        this.setSize(WIDTH, HEIGHT);
 
 
-
-
-
-        this.setResizable(false);
         this.setLayout(new BorderLayout());
 
         //sets toolbar
         toolbar = new JPanel();
-        toolbar.setBackground(new Color(200,200,200));
+        toolbar.setBackground(new Color(200, 200, 200));
         FlowLayout l = new FlowLayout();
-        l.setHgap(WIDTH/25);
+        l.setHgap(WIDTH / 25);
         toolbar.setLayout(l);
         toolbar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-        toolbar.setPreferredSize(new Dimension(WIDTH,HEIGHT/10));
+        toolbar.setPreferredSize(new Dimension(WIDTH, HEIGHT / 10));
 
         //sets start and stop button
         startButton = new JButton("START");
@@ -82,9 +77,9 @@ public class ProgramGUI extends JFrame {
         //set canvas
         canvas = new JPanel();
         canvas.setBackground(Color.WHITE);
-        canvas.setLayout(new BoxLayout(canvas,BoxLayout.PAGE_AXIS));
+        canvas.setLayout(new BoxLayout(canvas, BoxLayout.PAGE_AXIS));
         canvas.setToolTipText("Displays the analysed color");
-        canvas.setPreferredSize(new Dimension(WIDTH,(int)(HEIGHT*0.9)));
+        canvas.setPreferredSize(new Dimension(WIDTH, (int) (HEIGHT * 0.9)));
 
 
         //set textpane
@@ -94,14 +89,14 @@ public class ProgramGUI extends JFrame {
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         //set font
-        Font font = new Font("NoName", Font.PLAIN, canvas.getPreferredSize().height/6);
+        Font font = new Font("NoName", Font.PLAIN, canvas.getPreferredSize().height / 6);
         textPane.setFont(font);
 
         textPane.setText("#ffffff");
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
         textPane.setEditable(false);
         textPane.setBackground(Color.WHITE);
-        textPane.setPreferredSize(new Dimension(canvas.getPreferredSize().width/3,canvas.getPreferredSize().height/4));
+        textPane.setPreferredSize(new Dimension(canvas.getPreferredSize().width / 3, canvas.getPreferredSize().height / 4));
         textPane.setToolTipText("Displays the hex-code\n of the analysed color");
 
 
@@ -114,7 +109,7 @@ public class ProgramGUI extends JFrame {
         slider.setValue(0);
         slider.setUI(new BasicSliderUI());
         slider.setToolTipText("Adjust the radius of the tool");
-        slider.setBackground(new Color(200,200,200));
+        slider.setBackground(new Color(200, 200, 200));
         //TODO set size
 
         toolbar.add(startButton);
@@ -123,23 +118,16 @@ public class ProgramGUI extends JFrame {
         toolbar.add(slider);
 
 
-
         //TODO adds machen
 
 
         canvas.add(textPane);
-        canvas.setBorder(BorderFactory.createEmptyBorder((canvas.getPreferredSize().height-textPane.getPreferredSize().height)/2,(canvas.getPreferredSize().width-textPane.getPreferredSize().width)/2,(canvas.getPreferredSize().height-textPane.getPreferredSize().height)/2,(canvas.getPreferredSize().width-textPane.getPreferredSize().width)/2));
+        canvas.setBorder(BorderFactory.createEmptyBorder((canvas.getPreferredSize().height - textPane.getPreferredSize().height) / 2, (canvas.getPreferredSize().width - textPane.getPreferredSize().width) / 2, (canvas.getPreferredSize().height - textPane.getPreferredSize().height) / 2, (canvas.getPreferredSize().width - textPane.getPreferredSize().width) / 2));
 
 
-        this.add(toolbar,BorderLayout.NORTH);
-        this.add(canvas,BorderLayout.CENTER);
+        this.add(toolbar, BorderLayout.NORTH);
+        this.add(canvas, BorderLayout.CENTER);
 
-        this.getContentPane().setSize(WIDTH, HEIGHT);
-        this.pack();
-
-
-        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        this.setVisible(true);
 
         //Listener
         startButton.addActionListener(new ActionListener() {
@@ -158,20 +146,20 @@ public class ProgramGUI extends JFrame {
         slider.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent e) {
-                size=slider.getValue();
-                currentSizePane.setText("radius: "+size);
+                size = slider.getValue();
+                currentSizePane.setText("radius: " + size);
 
-                if (slider.getValue()==0){
+                if (slider.getValue() == 0) {
                     getter = new SinglePixelGetter();
-                }else{
-                    getter= new MultiPixelGetter();
+                } else {
+                    getter = new MultiPixelGetter();
                 }
             }
         });
         canvas.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -189,7 +177,7 @@ public class ProgramGUI extends JFrame {
         this.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -206,7 +194,7 @@ public class ProgramGUI extends JFrame {
         canvas.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -223,7 +211,7 @@ public class ProgramGUI extends JFrame {
         textPane.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -240,7 +228,7 @@ public class ProgramGUI extends JFrame {
         toolbar.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -258,7 +246,7 @@ public class ProgramGUI extends JFrame {
         stopButton.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -276,7 +264,7 @@ public class ProgramGUI extends JFrame {
         startButton.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -293,7 +281,7 @@ public class ProgramGUI extends JFrame {
         slider.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -311,7 +299,7 @@ public class ProgramGUI extends JFrame {
         currentSizePane.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (analysing){
+                if (analysing) {
                     update();
                 }
             }
@@ -329,13 +317,10 @@ public class ProgramGUI extends JFrame {
 
     }
 
-    private void update(){
+    private void update() {
         Color g = getter.getColor(size);
         canvas.setBackground(g);
         textPane.setText(ColorGetter.getHEX(g));
     }
 
-    public static void main(String[] args) {
-        new ProgramGUI();
-    }
 }
