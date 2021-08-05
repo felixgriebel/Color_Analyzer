@@ -115,12 +115,12 @@ public class ProgramTabPanel extends JPanel {
 
 
         //Listener
-        startButton.addActionListener((event) -> {
-            analysing = true;
-        });
-        stopButton.addActionListener((event) -> {
-            analysing = true;
-        });
+        startButton.addActionListener(event ->
+                analysing = true
+        );
+        stopButton.addActionListener(event ->
+                analysing = true
+        );
 
         slider.addChangeListener((event) -> {
             size = slider.getValue();
