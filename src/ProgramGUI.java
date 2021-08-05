@@ -2,14 +2,17 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.plaf.basic.BasicSliderUI;
-import javax.swing.plaf.metal.MetalSliderUI;
-import javax.swing.plaf.multi.MultiSliderUI;
-import javax.swing.plaf.synth.SynthSliderUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ProgramGUI extends JFrame {
+
+    /*TODO add crossmode
+        differ between cross and full mode and real mid mode
+        add tabs
+        add save option
+     */
     private static final int WIDTH=800;
     private static final int HEIGHT=400;
 
@@ -97,6 +100,7 @@ public class ProgramGUI extends JFrame {
         toolbar.add(stopButton);
         toolbar.add(currentSizePane);
         toolbar.add(slider);
+
 
 
         //TODO adds machen
