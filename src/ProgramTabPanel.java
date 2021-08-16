@@ -119,7 +119,7 @@ public class ProgramTabPanel extends JPanel {
                 analysing = true
         );
         stopButton.addActionListener(event ->
-                analysing = true
+                analysing = false
         );
 
         slider.addChangeListener((event) -> {
