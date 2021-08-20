@@ -3,7 +3,6 @@ import javax.swing.plaf.basic.BasicTabbedPaneUI;
 import java.awt.*;
 
 public class Programframe extends JFrame {
-    //TODO
 
 
     private static final int WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width / 3;
