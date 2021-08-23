@@ -4,3 +4,10 @@ Either download the sourcecode or download the .exe-file
 
 There may be problems with executing the application, because the windows-defender doesn't accept it, 
 just (press "further information" on windows and) allow it to execute
+
+
+Explanation:
+  Start the App and press START
+  then you can scan a color by moving your cursor and pressing a letter-key on your keyboard
+  press PAUSE to pause the scanning to press CTRL-C, after that you have to press START again
+  To scan multiple Colors you can use the different tabs
