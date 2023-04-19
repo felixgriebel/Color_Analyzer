@@ -20,9 +20,16 @@ To use the application follow the steps below:
 
 ### Different Features:
 
-This is how the application looks like:
-![alt text](./pictures/general_picture_color_code.png "This should be how it looks like")
+**This is how the application looks like:**
 
+![<img src="./pictures/general_picture.png" width="200" />](./pictures/general_picture.png "This should be how it looks like")
+
+
+<img src="./pictures/general_picture.png" width="200" />
+
+
+
+**This button is the `START`-Button. If the **
 Explanation:
   Start the App and press START
   then you can scan a color by moving your cursor and pressing a letter-key on your keyboard
