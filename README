@@ -1,10 +1,22 @@
-This is the second version of the Color-Analyser.
+# Color Analyzing Tool
 
-Either download the sourcecode or download the .exe-file
+--- 
 
-There may be problems with executing the application, because the windows-defender doesn't accept it, 
-just (press "further information" on windows and) allow it to execute
+### General Information:
 
+**This tool is created to assist when choosing a color.**
+
+**It is designed to read the RGB-Value (e.g. #ff5688) at a specified position at the screen.**
+
+---
+
+### How To Use:
+
+To use the application follow the steps below:
+
+    1. Download the Repository
+    1. To execute, you can simply run the `ColorAnalyzer.jar`-File. Alternatively, you can compile the Java-Files in the `src`-Folder.
+    1.
 
 Explanation:
   Start the App and press START
