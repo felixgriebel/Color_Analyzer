@@ -21,7 +21,7 @@ To use the application follow the steps below:
 ### Different Features:
 
 This is how the application looks like:
-![alt text](pictures_README/general_picture_color_code.PNG "This should be how it looks like")
+![alt text](./pictures/general_picture_color_code.png "This should be how it looks like")
 
 Explanation:
   Start the App and press START
