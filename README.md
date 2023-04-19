@@ -10,13 +10,17 @@
 
 ---
 
-### How To Use:
+### How To Execute:
 
 To use the application follow the steps below:
 
     1. Download the Repository
-    1. To execute, you can simply run the `ColorAnalyzer.jar`-File. Alternatively, you can compile the Java-Files in the `src`-Folder.
-    1.
+    1. To execute, you can simply run the `ColorAnalyzer.jar`-File. 
+       Alternatively, you can compile the Java-Files in the `src`-Folder.
+
+### Different Features:
+
+
 
 Explanation:
   Start the App and press START
