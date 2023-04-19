@@ -21,7 +21,7 @@ To use the application follow the steps below:
 ### Different Features:
 
 This is how the application looks like:
-![](.\pictures_README\general_picture.PNG)
+![alt text](general_picture.PNG "This should be how it looks like")
 
 Explanation:
   Start the App and press START
