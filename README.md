@@ -22,7 +22,7 @@ To use the application follow the steps below:
 
 #### General Appearance:
 
-![alt test](./pictures/general_picture.png "The appearance of the application.")
+![alt test](./pictures/general_pictures.png "The appearance of the application.")
 
 This is how the application looks like.
 
@@ -33,7 +33,7 @@ If it may not work after first starting the App, press the `START`-Button. (See 
 
 After scanning, the app may look similar to this:
 
-![alt test](./pictures/general_with_color.png "Color Analyzer after scanning.")
+![alt test](./pictures/general_with_colors.png "Color Analyzer after scanning.")
 
 #### The Color Code:
 
