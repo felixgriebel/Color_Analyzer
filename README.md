@@ -20,7 +20,8 @@ To use the application follow the steps below:
 
 ### Different Features:
 
-
+This is how the application looks like:
+![](.\pictures_README\general_picture.PNG)
 
 Explanation:
   Start the App and press START
