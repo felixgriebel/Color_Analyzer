@@ -1,0 +1,4 @@
+#exclude the picture folder
+pictures/
+.idea/
+ColorAnalyzer.iml
