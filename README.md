@@ -22,7 +22,7 @@ To use the application follow the steps below:
 
 #### General Appearance:
 
-![alt test](./pictures/general_pictures.png "The appearance of the application.")
+![general_pictures](https://user-images.githubusercontent.com/83243533/236502105-eb6dadd6-19ce-4cc0-907f-e8273c1d9009.png)
 
 This is how the application looks like.
 
@@ -33,13 +33,13 @@ If it may not work after first starting the App, press the `START`-Button. (See 
 
 After scanning, the app may look similar to this:
 
-![alt test](./pictures/general_with_colors.png "Color Analyzer after scanning.")
+![general_with_colors](https://user-images.githubusercontent.com/83243533/236502254-15d95452-f6ed-4da3-9485-f55b993cbc9c.png)
 
 #### The Color Code:
 
 This is the Color Code:
 
-![alt test](./pictures/general_picture_color_code.png "The Color Code.")
+![general_picture_color_code](https://user-images.githubusercontent.com/83243533/236502358-769add34-661f-41b1-82f1-19a62d224e27.png)
 
 It depicts the Color as a hexcode, describing the Red-, Green- and Blue-Value.
 The `#` is not necessary, but often used to represent this color-coding.
@@ -50,7 +50,7 @@ The first two character after the `#` represent the red-value. The Two after the
 
 The `START`-Button looks like this:
 
-![alt test](./pictures/general_picture_start_button.png "The Start Button.")
+![general_picture_start_button](https://user-images.githubusercontent.com/83243533/236502488-cb1028fe-26b1-4842-8fad-67d99dece29b.png)
 
 After starting the application, it is sometimes needed to press this button.
 This button is also used to start the scanning-process after it was paused.
@@ -59,7 +59,7 @@ This button is also used to start the scanning-process after it was paused.
 
 The `PAUSE`-Button looks like this:
 
-![alt test](./pictures/general_picture_pause_button.png "The Start Button.")
+![general_picture_pause_button](https://user-images.githubusercontent.com/83243533/236502589-b8851ff8-14e0-426b-9d57-6cb1f7e538bb.png)
 
 The button is used to stop the scanning purpose. The main-reason for this is the ability to copy the Color-Code afterwards with `CTRL + C`. Otherwise the application would scan again after presseng `CTRL`.
 
@@ -67,7 +67,7 @@ The button is used to stop the scanning purpose. The main-reason for this is the
 
 The Scanning Radius is controlled over this slider:
 
-![alt test](./pictures/general_picture_radius.png "The Radius Slider.")
+![general_picture_radius](https://user-images.githubusercontent.com/83243533/236502660-02670c49-a26c-41a5-86c4-e6daa2eff074.png)
 
 Normally the application would scan only one pixel, but with a radius of 'r', we scan a square of '2r + 1' and put out the average color.
 
@@ -79,7 +79,7 @@ On the left of the slider, we can read which radius is currently used.
 
 We have 10 Tabs available to scan different colors:
 
-![alt test](./pictures/general_picture_tabs.png "The different tabs.")
+![general_picture_tabs](https://user-images.githubusercontent.com/83243533/236502724-bd9c4902-115d-4133-8179-ea24c0fdf8d3.png)
 
 We can use the different tabs to scan a color and switch to a new tab to scan the next color.
 
